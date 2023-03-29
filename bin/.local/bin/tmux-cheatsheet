@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+
+languages=$(echo "go js typescript rust" | tr " " "\n")
+core_utils=$(echo "find xargs sed awk grep" | tr " " "\n")
+selected=$(echo -e "$languages\n$core_utils" | fzf)
+
+read -p "Query: " query
+
+if echo "$languages" | grep -qs $selected; then
+    cmd="$selected/$(echo "$query" | tr " " "+")"
+else
+    cmd="$selected~$query"
+fi
+
+window_size_in_percent=40
+tmux split-window -h -p $window_size_in_percent bash -c "curl cht.sh/$cmd | less -q"
+
