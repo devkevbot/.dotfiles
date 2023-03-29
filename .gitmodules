@@ -1,0 +1,3 @@
+[submodule "nvim/.config/init.lua"]
+	path = nvim/.config/init.lua
+	url = git@github.com:devkevbot/init.lua.git
