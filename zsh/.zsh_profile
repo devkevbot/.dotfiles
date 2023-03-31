@@ -22,3 +22,5 @@ unsetopt LIST_BEEP
 alias vim="nvim"
 alias vi="nvim"
 
+alias gc="git-checkout"
+alias gbd="git-branch-delete"

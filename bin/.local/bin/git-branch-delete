@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+# xargs trims whitespace
+target_branch=$(git branch | fzf | xargs)
+git branch -D $target_branch
