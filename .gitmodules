@@ -1,3 +1,6 @@
 [submodule "nvim/.config/init.lua"]
 	path = nvim/.config/init.lua
 	url = git@github.com:devkevbot/init.lua.git
+[submodule "vscode/.config/settings.json"]
+	path = vscode/.config/settings.json
+	url = https://github.com/devkevbot/settings.json.git
